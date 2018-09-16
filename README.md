@@ -13,6 +13,14 @@ In deze repo vind je een LaTeX-sjabloon voor een Beamer-presentatie in de huisst
         - Default compiler: _txs:///xelatex_
         - PDF Chain: _txs:///xelatex | txs:///view-pdf_
 
+## Voorbeeld
+
+Bekijk het voorbeelddocument voor inspiratie, en een zicht op de mogelijkheden:
+
+- <HOGENT-voorbeeld.tex>: LaTeX broncode
+- <HOGENT-voorbeeld-wit.pdf>: resultaat, witte achtergrond
+- <HOGENT-voorbeeld-zwart.pdf>: resultaat, zwarte achtergrond
+
 ## Kleuren
 
 Er zijn twee kleurenschema's voorzien:
