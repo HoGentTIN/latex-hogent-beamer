@@ -1,0 +1,197 @@
+%------------------------------------------------------------------------------
+% Voorbeeld presentatie HoGent - huisstijl 2018
+%------------------------------------------------------------------------------
+\documentclass[aspectratio=169]{beamer}
+
+% Je kan het lettertype iets vergroten door hierboven optie ``14pt'' toe te
+% voegen.
+
+%==============================================================================
+% Aanloop
+%==============================================================================
+
+%---------- Vormgeving --------------------------------------------------------
+
+\usetheme{hogent}
+
+% Kies hieronder een achtergrondkleur
+\usecolortheme{hgwhite} % witte achtergrond, zwarte tekst
+%\usecolortheme{hgblack} % zwarte achtergrond, witte tekst
+
+%---------- Packages ----------------------------------------------------------
+
+\usepackage[dutch]{babel}      % Nederlandse taal: splitsingen, enz.
+
+\usepackage{booktabs}          % Mooie tabellen
+\usepackage{multirow,multicol} % Tabelcellen samenvoegen
+\usepackage{eurosym}           % Euro symbool
+
+\usepackage{lipsum}             % Vultekst (enkel nuttig voor dit voorbeeld)
+
+%---------- Commando-definities -----------------------------------------------
+
+%---------- Info over de presentatie ------------------------------------------
+
+\title[Korte titel]{Titel van de presentatie.}
+\subtitle{subtitel}
+\author[BVV]{Bert {Van Vreckem} (\href{mailto:bert.vanvreckem@hogent.be}{bert.vanvreckem@hogent.be})}
+\date{\today}
+
+%==============================================================================
+% Inhoud presentatie
+%==============================================================================
+
+\begin{document}
+
+\frame{\maketitle}
+
+\begin{frame}
+  \frametitle{Inhoud.}
+
+  \tableofcontents
+\end{frame}
+
+\section{Eerste deel.}
+
+\begin{frame}
+  \frametitle{Inleiding.}
+  
+  \lipsum*[2]
+\end{frame}
+
+\begin{frame}
+
+\imgletter{img/blurred-background-cellphone-coffee-842554.jpg}{H}
+
+% Bron afbeelding: https://www.pexels.com/photo/man-with-hand-on-temple-looking-at-laptop-842554/
+
+{\huge \textbf{Voorbeeld van tekst door een afbeelding}}
+
+\end{frame}
+
+\subsection{Subsectie 1.1.}
+
+\begin{frame}
+  \frametitle{Titel.}
+
+  \begin{itemize}
+  \item Lijn één
+  \item Lijn twee
+  \item Lijn drie
+  \end{itemize}
+\end{frame}
+
+\subsection{Subsectie 1.2.}
+
+\begin{frame}
+  \frametitle{Twee kolommen.}
+
+  \begin{columns}[c]
+
+  \column{.5\textwidth}
+    \begin{itemize}
+    \item Lijn 1
+    \item Lijn 2
+    \item Lijn 3
+    \end{itemize}
+
+  \column{.5\textwidth}
+    \begin{itemize}
+    \item Lijn 1
+    \item Lijn 2
+    \item Lijn 3
+    \end{itemize}
+
+  \end{columns}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Kleuren}
+  
+  \textbf{\textcolor{hgdarkgreen}{tekst}
+  \textcolor{hgpink}{tekst}
+  \textcolor{hgochre}{tekst}
+  \textcolor{hgorange}{tekst}
+  \textcolor{hgpurple}{tekst}
+  \textcolor{hgblue}{tekst}
+  \textcolor{hglightgreen}{tekst}
+  \textcolor{hgbrown}{tekst}
+  \textcolor{hggrey}{tekst}
+  \textcolor{hgyellow}{tekst}}
+
+  \textbf{\colorbox{hgdarkgreen}{tekst}
+  \colorbox{hgpink}{tekst}
+  \colorbox{hgochre}{tekst}
+  \colorbox{hgorange}{tekst}
+  \colorbox{hgpurple}{tekst}
+  \colorbox{hgblue}{tekst}
+  \colorbox{hglightgreen}{tekst}
+  \colorbox{hgbrown}{tekst}
+  \colorbox{hggrey}{tekst}
+  \colorbox{hgyellow}{tekst}}
+
+\end{frame}
+
+\section{Tweede deel.}
+
+\begin{frame}
+  \frametitle{Het tweede deel.}
+  
+  \begin{table}
+    \begin{tabular}{lll}
+      \toprule
+                     & \textbf{lorem ipsum} & \textbf{lorem ipsum} \\
+      \midrule
+      dolor sit amet & $3.255$              & $3.255$ \\
+      \midrule
+      lorem ipsum    & $425,43 (13,07\%)$   & $425,43 (13,07\%)$ \\
+      \midrule
+      dolor sit amet & $0,00$               & $1.273,31$ ($45\%$ -- gemiddeld) \\
+      \midrule
+      \textbf{{\small Verhouding kost}} & \textbf{$1,53$} & \textbf{$2,72$}\\
+      \bottomrule
+    \end{tabular}
+    
+    \label{tab:voorbeeld}
+    \caption{Deze tabel heeft een bijschrift}
+  \end{table}
+\end{frame}
+
+\subsection{Sectie 2.1.}
+
+\begin{frame}
+  \frametitle{Afbeeldingen.}
+  \begin{figure}
+    \caption{Deze afbeelding heeft een bijschrift.}
+    \includegraphics[height=.8\textheight]{img/beverage-coffee-computer-984536.jpg}
+    % Bron afbeelding: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
+    \label{img:voorbeeld}
+  \end{figure}
+\end{frame}
+
+\begin{frame}
+  \includegraphics[width=\textwidth]{img/beverage-coffee-computer-984536.jpg}
+\end{frame}
+
+
+\begin{frame}
+
+  {\huge \textbf{This is a famous quote that says something about my point I want to make.}}
+  
+  \bigskip
+  
+  \textbf{Name Quotemaker}
+
+\end{frame}
+
+\begin{frame}[fragile]
+  \texttt{monogespatieerd lettertype met ligaturen -> <= >=}
+
+  \begin{verbatim}
+  a <- 1
+  b <- 2
+  a + b
+  \end{verbatim}
+\end{frame}
+
+\end{document}
