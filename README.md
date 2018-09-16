@@ -17,9 +17,9 @@ In deze repo vind je een LaTeX-sjabloon voor een Beamer-presentatie in de huisst
 
 Bekijk het voorbeelddocument voor inspiratie, en een zicht op de mogelijkheden:
 
-- <HOGENT-voorbeeld.tex>: LaTeX broncode
-- <HOGENT-voorbeeld-wit.pdf>: resultaat, witte achtergrond
-- <HOGENT-voorbeeld-zwart.pdf>: resultaat, zwarte achtergrond
+- [HOGENT-voorbeeld.tex](HOGENT-voorbeeld.tex): LaTeX broncode
+- [HOGENT-voorbeeld-wit.pdf](HOGENT-voorbeeld-wit.pdf): resultaat, witte achtergrond
+- [HOGENT-voorbeeld-zwart.pdf](HOGENT-voorbeeld-zwart.pdf): resultaat, zwarte achtergrond
 
 ## Kleuren
 
