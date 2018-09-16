@@ -13,6 +13,7 @@
 
 \RequirePackage{fontspec}
 \RequirePackage{tikz}
+\usetikzlibrary{fadings}
 \RequirePackage[overlay, absolute]{textpos}
 
 %--------------------------------------------------------------------------
@@ -34,21 +35,46 @@
 \definecolor{hgyellow}{RGB}{244,222,0}
 
 %--------------------------------------------------------------------------
+% Commando's
+%--------------------------------------------------------------------------
+
+% Het commando \imgletter voegt een afbeelding toe, uitgeknipt in de vorm
+% van een gekozen letter.
+% vb: \imgletter{img/hogent.png}{H}
+% Bron: https://tex.stackexchange.com/questions/63146/negative-font-overlayed-with-a-photo
+
+\newlength{\letterlength}
+\newcommand{\imgletter}[2]{%
+  \begin{tikzfadingfrompicture}[name=letter#2]
+    \node[text=transparent!0] {%
+      {\fontspec[Scale=21]{Code Pro Black}%
+       \settowidth{\letterlength}{#2}
+       \hspace{.6\letterlength}#2}
+    };
+  \end{tikzfadingfrompicture}
+  \begin{tikzpicture}[remember picture, overlay,anchor=north west]
+    \node[scope fading=letter#2,fit fading=false,fill=white] {};
+    \node[scope fading=letter#2,fit fading=false] at (current page.north west) {%
+      \includegraphics[height=\textheight]{#1}
+    };
+  \end{tikzpicture}
+}
+
+%--------------------------------------------------------------------------
 % Lettertypes
 %--------------------------------------------------------------------------
 
-\usefonttheme{professionalfonts}
-
 \setsansfont{Montserrat}
 \setmonofont{Fira Code}
+
 \setmathrm{Montserrat}
 \setmathsf{Montserrat}
+\setmathtt{Fira Code}
 \setboldmathrm{Montserrat ExtraBold}
 
 \setbeamerfont{title}{series=\bfseries, size=\Huge}
 \setbeamerfont{subtitle}{series=\bfseries, size=\large}
 \setbeamerfont{frametitle}{series=\bfseries, size=\Huge}
-%\setbeamerfont{}
 
 %--------------------------------------------------------------------------
 % ``Outer'' templates
@@ -71,13 +97,6 @@
 \AtBeginSection[] % Do nothing for \section*
 {
   \begin{frame}<beamer>
-  
-% Experiment voor letter met ``geclipte'' foto in de achtergrond
-%  \begin{tikzpicture}[remember picture, overlay]
-%  \node[anchor=north west,inner sep=0pt] at (0,0) {%
-%    \fontsize{280pt}{\baselineskip}\textbf{H}
-%  };
-%  \end{tikzpicture}
 
     \begin{beamercolorbox}[wd=\paperwidth, ht=.5\textheight, leftskip=1cm]{title page header}
       \usebeamerfont{title}\usebeamercolor{title}\insertsection%
@@ -88,7 +107,7 @@
 %--------------------------------------------------------------------------
 
 \setbeamertemplate{navigation symbols}{}
-\setbeamertemplate{blocks}[rounded][shadow=true]
+\setbeamertemplate{blocks}[default]
 
 % ``bullets'' op drie niveaus
 \setbeamertemplate{itemize item}{$\bullet$}  % opgevulde cirkel
