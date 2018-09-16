@@ -1,0 +1,30 @@
+# General files to ignore
+*~
+*.bak
+.*.un~
+
+# Files specific to editors
+# Gedit LaTeX ini file
+.*.ini
+# Vim-Latex
+*latexmain
+
+# LaTeX compilation artifacts
+*.aux
+*.bbl
+*.blg
+*.brf
+*.fls
+*.lof
+*.log
+*.lol
+*.lot
+*.nav
+*.out
+*.snm
+*.synctex.gz
+*.thm
+*.toc
+*.vrb
+*.fdb_latexmk
+

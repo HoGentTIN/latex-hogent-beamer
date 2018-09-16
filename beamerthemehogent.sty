@@ -1,0 +1,98 @@
+%==========================================================================
+% LaTeX Beamer Presentatiestijl voor HoGent - huisstijl 2018
+%==========================================================================
+% Auteur: Bert Van Vreckem [bert.vanvreckem@hogent.be]
+
+\ProvidesPackage{beamerthemehogent}
+
+\mode<presentation>
+
+%--------------------------------------------------------------------------
+% Nodige packages
+%--------------------------------------------------------------------------
+
+\RequirePackage{fontspec}
+\RequirePackage{tikz}
+\RequirePackage[overlay, absolute]{textpos}
+
+%--------------------------------------------------------------------------
+% Kleuren
+%--------------------------------------------------------------------------
+% Bron: https://hnet.hogent.be/themas/communicatie/huisstijl-logo-s-en-sjablonen/kleurgebruik/
+
+% Kleurendefinities
+
+\definecolor{hgdarkgreen}{RGB}{22,176,165}
+\definecolor{hgpink}{RGB}{241,157,160}
+\definecolor{hgochre}{RGB}{250,188,50}
+\definecolor{hgorange}{RGB}{239,135,103}
+\definecolor{hgpurple}{RGB}{187,144,189}
+\definecolor{hgblue}{RGB}{76,162,213}
+\definecolor{hglightgreen}{RGB}{165,202,114}
+\definecolor{hgbrown}{RGB}{216,176,131}
+\definecolor{hggrey}{RGB}{195,187,175}
+\definecolor{hgyellow}{RGB}{244,222,0}
+
+%--------------------------------------------------------------------------
+% Lettertypes
+%--------------------------------------------------------------------------
+
+\usefonttheme{professionalfonts}
+
+\setsansfont{Montserrat}
+\setmonofont{Fira Code}
+\setmathrm{Montserrat}
+\setmathsf{Montserrat}
+\setboldmathrm{Montserrat ExtraBold}
+
+\setbeamerfont{title}{series=\bfseries, size=\Huge}
+\setbeamerfont{subtitle}{series=\bfseries, size=\large}
+\setbeamerfont{frametitle}{series=\bfseries, size=\Huge}
+%\setbeamerfont{}
+
+%--------------------------------------------------------------------------
+% ``Outer'' templates
+%--------------------------------------------------------------------------
+
+\setbeamertemplate{title page}{%
+  \begin{beamercolorbox}[wd=\paperwidth, ht=.8\textheight, leftskip=1cm]{title page header}
+    \usebeamerfont{title}\usebeamercolor{title}\inserttitle \\%
+    \usebeamerfont{subtitle}\usebeamercolor{subtitle}\insertsubtitle%
+    
+    \bigskip\bigskip\bigskip\bigskip
+    
+    \usebeamerfont{framesubtitle}\insertauthor%
+    
+    \insertdate
+  \end{beamercolorbox}%
+}
+
+% Voeg een titeldia toe bij het begin van een nieuwe sectie
+\AtBeginSection[] % Do nothing for \section*
+{
+  \begin{frame}<beamer>
+  
+% Experiment voor letter met ``geclipte'' foto in de achtergrond
+%  \begin{tikzpicture}[remember picture, overlay]
+%  \node[anchor=north west,inner sep=0pt] at (0,0) {%
+%    \fontsize{280pt}{\baselineskip}\textbf{H}
+%  };
+%  \end{tikzpicture}
+
+    \begin{beamercolorbox}[wd=\paperwidth, ht=.5\textheight, leftskip=1cm]{title page header}
+      \usebeamerfont{title}\usebeamercolor{title}\insertsection%
+    \end{beamercolorbox}%
+  \end{frame}
+}
+
+%--------------------------------------------------------------------------
+
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{blocks}[rounded][shadow=true]
+
+% ``bullets'' op drie niveaus
+\setbeamertemplate{itemize item}{$\bullet$}  % opgevulde cirkel
+\setbeamertemplate{itemize subitem}{$\circ$} % lege cirkel
+\setbeamertemplate{itemize subsubitem}{--}   % streepje
+
+\mode<all>
