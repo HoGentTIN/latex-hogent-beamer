@@ -76,7 +76,6 @@ De letter blijft op de achtergrond, zodat er nog tekst voor kan geplaatst worden
 
 - Op dit moment wordt voor wiskundige formules het Computer Modern font gebruikt, in plaats van Montserrat, of in elk geval een schreefloos lettertype.
 - De positionering van de "fotoletters" is nog niet optimaal.
-- De stijl heeft geen paginanummering.
 
 ## Vragen, problemen, verbeteringen
 
