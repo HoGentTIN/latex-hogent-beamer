@@ -20,11 +20,16 @@
 \setbeamercolor{normal text}{fg=black}
 \setbeamercolor{alerted text}{fg=hgorange}
 
-% Voettekst van de presentatie: enkel HOGENT logo rechtsonder
+% Voettekst: paginanummer links, HOGENT logo rechts
 \setbeamertemplate{footline}{%
-  \hfill%
-  \includegraphics[width=1.5cm]{img/HOGENT_Logo_Pos_rgb.png}%
-  \hspace*{.85cm}\vspace*{.8cm}%
+  \begin{beamercolorbox}[wd=\paperwidth]{footline}
+    \usebeamercolor{page number in foot}
+    \usebeamerfont{page number in foot}
+    \hspace{1em}\insertframenumber/\inserttotalframenumber
+    \hfill
+    \includegraphics[width=1.5cm]{img/HOGENT_Logo_Pos_rgb.png}
+    \hspace*{.85cm}\vspace*{.8cm}
+  \end{beamercolorbox}
 }
 
 \mode<all>
