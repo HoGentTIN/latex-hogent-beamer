@@ -11,10 +11,10 @@
 % Nodige packages
 %--------------------------------------------------------------------------
 
-\RequirePackage{fontspec}
 \RequirePackage{tikz}
-\usetikzlibrary{fadings}
+\usetikzlibrary{fadings,positioning}
 \RequirePackage[overlay, absolute]{textpos}
+\RequirePackage{fontspec}
 
 %--------------------------------------------------------------------------
 % Kleuren
@@ -43,20 +43,13 @@
 % vb: \imgletter{img/hogent.png}{H}
 % Bron: https://tex.stackexchange.com/questions/63146/negative-font-overlayed-with-a-photo
 
-\newlength{\letterlength}
 \newcommand{\imgletter}[2]{%
   \begin{tikzfadingfrompicture}[name=letter#2]
-    \node[text=transparent!0] {%
-      {\fontspec[Scale=21]{Code Pro Black}%
-       \settowidth{\letterlength}{#2}
-       \hspace{.6\letterlength}#2}
-    };
+    \node[draw,text=transparent!0]{\fontspec[Scale=26]{Code Pro Black}#2};
   \end{tikzfadingfrompicture}
-  \begin{tikzpicture}[remember picture, overlay,anchor=north west]
-    \node[scope fading=letter#2,fit fading=false,fill=white] {};
-    \node[scope fading=letter#2,fit fading=false] at (current page.north west) {%
-      \includegraphics[height=\textheight]{#1}
-    };
+  \begin{tikzpicture}[remember picture,overlay,anchor=north west]
+    \node[draw,scope fading=letter#2,fit fading=false]
+      at (current page.north west) {\includegraphics[height=\textheight]{#1}};
   \end{tikzpicture}
 }
 
