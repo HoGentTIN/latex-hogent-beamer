@@ -38,20 +38,7 @@
 % Commando's
 %--------------------------------------------------------------------------
 
-% Het commando \imgletter voegt een afbeelding toe, uitgeknipt in de vorm
-% van een gekozen letter.
-% vb: \imgletter{img/hogent.png}{H}
-% Bron: https://tex.stackexchange.com/questions/63146/negative-font-overlayed-with-a-photo
 
-\newcommand{\imgletter}[2]{%
-  \begin{tikzfadingfrompicture}[name=letter#2]
-    \node[draw,text=transparent!0]{\fontspec[Scale=26]{Code Pro Black}#2};
-  \end{tikzfadingfrompicture}
-  \begin{tikzpicture}[remember picture,overlay,anchor=north west]
-    \node[draw,scope fading=letter#2,fit fading=false]
-      at (current page.north west) {\includegraphics[height=\textheight]{#1}};
-  \end{tikzpicture}
-}
 
 %--------------------------------------------------------------------------
 % Lettertypes
@@ -86,6 +73,28 @@
   \end{beamercolorbox}%
 }
 
+% Met dit template kan je een afbeelding op de achtergrond toevoegen, uitgeknipt
+% in de vorm van een gekozen letter.
+% Voorbeeld gebruik:
+% \setbeamertemplate{background}[imgletter]{img/example.jpg}{E}
+%
+% Bronnen:
+% https://tex.stackexchange.com/questions/63146/negative-font-overlayed-with-a-photo
+% https://tex.stackexchange.com/questions/451312/positioning-of-text-in-tikzfadingfrompicture
+% Met dank aan TeX.SE-gebruikers marmot en samcarter voor hun hulp
+
+\defbeamertemplate{background}{imgletter}[2]{%
+  \begin{tikzfadingfrompicture}[name=letter#2]
+    \path[use as bounding box] (-15,-4) rectangle (6,12);
+    \node[text=transparent!0] {\fontspec[Scale=26]{Code Pro Black}#2};
+  \end{tikzfadingfrompicture}
+  
+  \begin{tikzpicture}[remember picture,overlay,anchor=north west]
+  \node[scope fading=letter#2,fit fading=false]
+  at (current page.north west) {\includegraphics[height=\textheight]{#1}};
+  \end{tikzpicture}
+}
+
 % Voeg een titeldia toe bij het begin van een nieuwe sectie
 \AtBeginSection[] % Do nothing for \section*
 {
@@ -97,6 +106,8 @@
   \end{frame}
 }
 
+%--------------------------------------------------------------------------
+% ``Inner'' templates
 %--------------------------------------------------------------------------
 
 \setbeamertemplate{navigation symbols}{}
