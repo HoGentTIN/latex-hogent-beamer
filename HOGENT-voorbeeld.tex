@@ -43,7 +43,14 @@
 
 \begin{document}
 
-\frame{\maketitle}
+{
+\setbeamertemplate{background}[imgletter]{img/blurred-background-cellphone-coffee-842554.jpg}{H}
+% Bron afbeelding: https://tex.stackexchange.com/questions/63146/negative-font-overlayed-with-a-photo
+
+\begin{frame}
+  \maketitle
+\end{frame}
+}
 
 \begin{frame}
   \frametitle{Inhoud.}
@@ -59,15 +66,15 @@
   \lipsum*[2]
 \end{frame}
 
+{
+\setbeamertemplate{background}[imgletter]{img/blurred-background-cellphone-coffee-842554.jpg}{W}
+
 \begin{frame}
-
-\imgletter{img/blurred-background-cellphone-coffee-842554.jpg}{H}
-
-% Bron afbeelding: https://www.pexels.com/photo/man-with-hand-on-temple-looking-at-laptop-842554/
 
 {\huge \textbf{Voorbeeld van tekst door een afbeelding}}
 
 \end{frame}
+}
 
 \subsection{Subsectie 1.1.}
 
@@ -174,6 +181,10 @@
 \end{frame}
 
 
+{
+\setbeamertemplate{background}[imgletter]%
+  {img/beverage-coffee-computer-984536.jpg}{T}
+
 \begin{frame}
 
   {\huge \textbf{This is a famous quote that says something about my point I want to make.}}
@@ -183,6 +194,7 @@
   \textbf{Name Quotemaker}
 
 \end{frame}
+}
 
 \begin{frame}[fragile]
   \texttt{monogespatieerd lettertype met ligaturen -> <= >=}
