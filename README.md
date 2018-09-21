@@ -56,26 +56,28 @@ Omdat Markdown niet toelaat kleuren te tonen, bekijk je best <https://hnet.hogen
 
 Eén van de typische elementen van de HOGENT huisstijl zijn de grote letters (in lettertype Code Pro Black) ingevuld met een foto. Het Powerpoint-sjabloon dat door de dienst communicatie werd gepubliceerd, bevat één voorbeeld hiervan, met de letter H. Daar is echter een "workaround" gebruikt in die zin dat het effect bekomen is door de letter in een afbeelding te plakken en die daar transparant te maken. Dat betekent dat in het Powerpoint-sjabloon ook enkel de H kan gebruikt worden.
 
-Deze stijl laat toe elke "glyph" van het lettertype te gebruiken in combinatie met elke gewenste afbeelding via het commando `\imgletter`. Een voorbeeld met de letter M:
+Deze stijl laat toe elke "glyph" van het lettertype te gebruiken in combinatie met elke gewenste afbeelding via een achtergrondsjabloon. Een voorbeeld met de letter H:
 
 ```latex
-\imgletter{img/afbeelding.png}{M}
+\setbeamertemplate{background}[imgletter]{img/example.jpg}{H}
 ```
 
 De letter blijft op de achtergrond, zodat er nog tekst voor kan geplaatst worden, bv.
 
-
 ```latex
+{
+\setbeamertemplate{background}[imgletter]{img/example.jpg}{H}
 \begin{frame}
-  \imgletter{img/blurred-background-cellphone-coffee-842554.jpg}{H}
   {\huge \textbf{Voorbeeld van tekst door een afbeelding}}
 \end{frame}
+}
 ```
+
+Wanneer het `\setbeamertemplate`-commando uitgevoerd wordt, zullen in principe alle volgende slides dezelfde achtergrond krijgen. De accolades vooraan en achteraan in het vorige voorbeeld zorgen er voor dat de achtergrond enkel wordt toegepast op deze ene slide.
 
 ## Gekende Problemen
 
 - Op dit moment wordt voor wiskundige formules het Computer Modern font gebruikt, in plaats van Montserrat, of in elk geval een schreefloos lettertype.
-- De positionering van de "fotoletters" is nog niet optimaal.
 
 ## Vragen, problemen, verbeteringen
 
