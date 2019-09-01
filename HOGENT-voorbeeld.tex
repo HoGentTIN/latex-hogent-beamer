@@ -34,7 +34,8 @@
 
 \title[Korte titel]{Titel van de presentatie.}
 \subtitle{subtitel}
-\author[BVV]{Bert {Van Vreckem} (\href{mailto:bert.vanvreckem@hogent.be}{bert.vanvreckem@hogent.be})}
+\author[BVV]{Bert {Van Vreckem} (\href{mailto:bert.vanvreckem@hogent.be}
+    {bert.vanvreckem@hogent.be})}
 \date{\today}
 
 %==============================================================================
@@ -48,136 +49,134 @@
     {blurred-background-cellphone-coffee-842554.jpg}{H}
 
 \begin{frame}
-  \maketitle
+    \maketitle
 \end{frame}
 }
 
 \begin{frame}
-  \frametitle{Inhoud.}
+    \frametitle{Inhoud.}
 
-  \tableofcontents
+    \tableofcontents
 \end{frame}
 
 \section{Eerste deel.}
 
 \begin{frame}
-  \frametitle{Inleiding.}
+    \frametitle{Inleiding.}
 
-  \lipsum*[2]
+    \lipsum*[2]
 \end{frame}
 
 {
-\setbeamertemplate{background}[imgletter]{blurred-background-cellphone-coffee-842554.jpg}{W}
+\setbeamertemplate{background}[imgletter]
+    {blurred-background-cellphone-coffee-842554.jpg}{W}
 
 \begin{frame}
-
-{\huge \textbf{Voorbeeld van tekst door een afbeelding}}
-
+    {\huge \textbf{Voorbeeld van tekst door een afbeelding}}
 \end{frame}
 }
 
 \subsection{Subsectie 1.1.}
 
 \begin{frame}
-  \frametitle{Titel.}
+    \frametitle{Titel.}
 
-  \begin{itemize}
-  \item Lijn één
-  \item Lijn twee
-  \item Lijn drie
-  \end{itemize}
+    \begin{itemize}
+        \item Lijn één
+        \item Lijn twee
+        \item Lijn drie
+    \end{itemize}
 \end{frame}
 
 \subsection{Subsectie 1.2.}
 
 \begin{frame}
-  \frametitle{Twee kolommen.}
+    \frametitle{Twee kolommen.}
 
-  \begin{columns}[c]
+    \begin{columns}[c]
+        \column{.5\textwidth}
+        \begin{itemize}
+            \item Lijn 1
+            \item Lijn 2
+            \item Lijn 3
+        \end{itemize}
 
-  \column{.5\textwidth}
-    \begin{itemize}
-    \item Lijn 1
-    \item Lijn 2
-    \item Lijn 3
-    \end{itemize}
-
-  \column{.5\textwidth}
-    \begin{itemize}
-    \item Lijn 1
-    \item Lijn 2
-    \item Lijn 3
-    \end{itemize}
-
-  \end{columns}
+        \column{.5\textwidth}
+        \begin{itemize}
+            \item Lijn 1
+            \item Lijn 2
+            \item Lijn 3
+        \end{itemize}
+    \end{columns}
 \end{frame}
 
 \begin{frame}
-  \frametitle{Kleuren}
+    \frametitle{Kleuren}
 
-  \textbf{\textcolor{hgdarkgreen}{tekst}
-  \textcolor{hgpink}{tekst}
-  \textcolor{hgochre}{tekst}
-  \textcolor{hgorange}{tekst}
-  \textcolor{hgpurple}{tekst}
-  \textcolor{hgblue}{tekst}
-  \textcolor{hglightgreen}{tekst}
-  \textcolor{hgbrown}{tekst}
-  \textcolor{hggrey}{tekst}
-  \textcolor{hgyellow}{tekst}}
+    \textbf{\textcolor{hgdarkgreen}{tekst}
+    \textcolor{hgpink}{tekst}
+    \textcolor{hgochre}{tekst}
+    \textcolor{hgorange}{tekst}
+    \textcolor{hgpurple}{tekst}
+    \textcolor{hgblue}{tekst}
+    \textcolor{hglightgreen}{tekst}
+    \textcolor{hgbrown}{tekst}
+    \textcolor{hggrey}{tekst}
+    \textcolor{hgyellow}{tekst}}
 
-  \textbf{\colorbox{hgdarkgreen}{tekst}
-  \colorbox{hgpink}{tekst}
-  \colorbox{hgochre}{tekst}
-  \colorbox{hgorange}{tekst}
-  \colorbox{hgpurple}{tekst}
-  \colorbox{hgblue}{tekst}
-  \colorbox{hglightgreen}{tekst}
-  \colorbox{hgbrown}{tekst}
-  \colorbox{hggrey}{tekst}
-  \colorbox{hgyellow}{tekst}}
-
+    \textbf{\colorbox{hgdarkgreen}{tekst}
+    \colorbox{hgpink}{tekst}
+    \colorbox{hgochre}{tekst}
+    \colorbox{hgorange}{tekst}
+    \colorbox{hgpurple}{tekst}
+    \colorbox{hgblue}{tekst}
+    \colorbox{hglightgreen}{tekst}
+    \colorbox{hgbrown}{tekst}
+    \colorbox{hggrey}{tekst}
+    \colorbox{hgyellow}{tekst}}
 \end{frame}
 
 \section{Tweede deel.}
 
 \begin{frame}
-  \frametitle{Het tweede deel.}
+\frametitle{Het tweede deel.}
 
-  \begin{table}
+\begin{table}
     \begin{tabular}{lll}
-      \toprule
-                     & \textbf{lorem ipsum} & \textbf{lorem ipsum} \\
-      \midrule
-      dolor sit amet & $3.255$              & $3.255$ \\
-      \midrule
-      lorem ipsum    & $425,43 (13,07\%)$   & $425,43 (13,07\%)$ \\
-      \midrule
-      dolor sit amet & $0,00$               & $1.273,31$ ($45\%$ -- gemiddeld) \\
-      \midrule
-      \textbf{{\small Verhouding kost}} & \textbf{$1,53$} & \textbf{$2,72$}\\
-      \bottomrule
+    \toprule
+                    & \textbf{lorem ipsum} & \textbf{lorem ipsum} \\
+    \midrule
+    dolor sit amet & $3.255$              & $3.255$ \\
+    \midrule
+    lorem ipsum    & $425,43 (13,07\%)$   & $425,43 (13,07\%)$ \\
+    \midrule
+    dolor sit amet & $0,00$               & $1.273,31$ ($45\%$ -- gemiddeld)\\
+    \midrule
+    \textbf{{\small Verhouding kost}} & \textbf{$1,53$} & \textbf{$2,72$}\\
+    \bottomrule
     \end{tabular}
 
     \label{tab:voorbeeld}
     \caption{Deze tabel heeft een bijschrift}
-  \end{table}
+    \end{table}
 \end{frame}
 
 \subsection{Sectie 2.1.}
 
 \begin{frame}
-  \frametitle{Afbeeldingen.}
-  \begin{figure}
-    \caption{Deze afbeelding heeft een bijschrift.}
-    \includegraphics[height=.8\textheight]{beverage-coffee-computer-984536.jpg}
-    % Bron afbeelding: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
-    \label{img:voorbeeld}
-  \end{figure}
+\frametitle{Afbeeldingen.}
+    \begin{figure}
+        \caption{Deze afbeelding heeft een bijschrift.}
+
+        \includegraphics[height=.8\textheight]
+            {beverage-coffee-computer-984536.jpg}
+        % Bron: https://www.pexels.com/photo/hand-on-cup-of-coffee-984536/
+        \label{img:voorbeeld}
+    \end{figure}
 \end{frame}
 
 \begin{frame}
-  \includegraphics[width=\textwidth]{beverage-coffee-computer-984536.jpg}
+    \includegraphics[width=\textwidth]{beverage-coffee-computer-984536.jpg}
 \end{frame}
 
 
@@ -187,23 +186,24 @@
 
 \begin{frame}
 
-  {\huge \textbf{This is a famous quote that says something about my point I want to make.}}
+    {\huge \textbf{This is a famous quote that says something about
+    my point I want to make.}}
 
-  \bigskip
+    \bigskip
 
-  \textbf{Name Quotemaker}
+    \textbf{Name Quotemaker}
 
 \end{frame}
 }
 
 \begin{frame}[fragile]
-  \texttt{monogespatieerd lettertype met ligaturen -> <= >=}
+    \texttt{monogespatieerd lettertype met ligaturen -> <= >=}
 
-  \begin{verbatim}
-  a <- 1
-  b <- 2
-  a + b
-  \end{verbatim}
+    \begin{verbatim}
+        a <- 1
+        b <- 2
+        a + b
+    \end{verbatim}
 \end{frame}
 
 \end{document}

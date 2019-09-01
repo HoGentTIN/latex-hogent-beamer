@@ -24,7 +24,8 @@
 %--------------------------------------------------------------------------
 % Kleuren
 %--------------------------------------------------------------------------
-% Bron: https://hnet.hogent.be/themas/communicatie/huisstijl-logo-s-en-sjablonen/kleurgebruik/
+% Bron: https://hnet.hogent.be/themas/communicatie/
+%    huisstijl-logo-s-en-sjablonen/kleurgebruik/
 
 % Kleurendefinities
 
@@ -140,7 +141,8 @@
 %--------------------------------------------------------------------------
 
 \setbeamertemplate{title page}{%
-  \begin{beamercolorbox}[wd=\paperwidth, ht=.8\textheight, leftskip=1cm]{title page header}
+  \begin{beamercolorbox}[wd=\paperwidth,ht=.8\textheight,leftskip=1cm]
+    {title page header}
     \usebeamerfont{title}\usebeamercolor{title}\inserttitle \\%
     \usebeamerfont{subtitle}\usebeamercolor{subtitle}\insertsubtitle%
 
@@ -158,8 +160,10 @@
 % \setbeamertemplate{background}[imgletter]{img/example.jpg}{E}
 %
 % Bronnen:
-% https://tex.stackexchange.com/questions/63146/negative-font-overlayed-with-a-photo
-% https://tex.stackexchange.com/questions/451312/positioning-of-text-in-tikzfadingfrompicture
+% https://tex.stackexchange.com/questions/63146/
+%    negative-font-overlayed-with-a-photo
+% https://tex.stackexchange.com/questions/451312/
+%    positioning-of-text-in-tikzfadingfrompicture
 % Met dank aan TeX.SE-gebruikers marmot en samcarter voor hun hulp
 
 \defbeamertemplate{background}{imgletter}[2]{%
@@ -179,8 +183,9 @@
 {
   \begin{frame}<beamer>
 
-    \begin{beamercolorbox}[wd=\paperwidth, ht=.5\textheight, leftskip=1cm]{title page header}
-      \usebeamerfont{title}\usebeamercolor{title}\insertsection%
+    \begin{beamercolorbox}[wd=\paperwidth, ht=.5\textheight, leftskip=1cm]
+        {title page header}
+        \usebeamerfont{title}\usebeamercolor{title}\insertsection%
     \end{beamercolorbox}%
   \end{frame}
 }
