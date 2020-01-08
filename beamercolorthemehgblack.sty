@@ -20,15 +20,26 @@
 \setbeamercolor{normal text}{fg=white,bg=black}
 \setbeamercolor{alerted text}{fg=hgorange}
 
-% Voettekst: paginanummer links, HOGENT logo rechts
+%% Use the length of the 'HO' part of the logo to set the padding of the logo
+\newsavebox{\logopart}
+\savebox{\logopart}{\includegraphics[height=1cm]{graphics/logopart}}
+
+%% Footer: pagenumber on the left, logo right
 \setbeamertemplate{footline}{%
   \begin{beamercolorbox}[wd=\paperwidth]{footline}
     \usebeamercolor{page number in foot}
     \usebeamerfont{page number in foot}
     \hspace{1em}\insertframenumber/\inserttotalframenumber
     \hfill
-    \includegraphics[width=1.5cm]{img/HOGENT_Logo_Neg_rgb.png}
-    \hspace*{.85cm}\vspace*{.8cm}
+
+    %% Insert the HoGent logo
+    \begin{tikzpicture}[remember picture, overlay]
+    \node [anchor=south east, shift={(-\the\wd\logopart, \the\wd\logopart)},
+    inner sep=0, outer sep=0] (logo) at (current page.south east)%
+    {%
+        \includegraphics[height=\the\ht\logopart]{hogent_logo_white}%
+    };%
+    \end{tikzpicture}
   \end{beamercolorbox}
 }
 
